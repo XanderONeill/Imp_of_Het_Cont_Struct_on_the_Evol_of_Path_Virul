@@ -11,6 +11,8 @@ rng("shuffle")
 %   alpha_0 = [0.73, 0.81, 0.9, 0.92, 0.94, 0.96, 0.95, 0.93, 0.92, 0.89, 0.83]
 
 % We do this as it speeds up the simulations if you start nearer to the ESS.
+% Requires functions: (i) RegularAdj (ii) Gillespie_Graph, and (iii)
+% trade_off_function
 
 % 1. Set G_T to be what you desire
 % 2. Change alpha_0 to be close to the ESS (see above)
