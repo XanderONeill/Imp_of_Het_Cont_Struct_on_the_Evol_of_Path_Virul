@@ -1,10 +1,6 @@
 clearvars
-close all
 
-% Requires the obtaining of data from the homogeneous network simulations.
-% Cannot upload our data files to Github as they take up too much file
-% space, but make sure to run simulations to obtain the correct data files
-% first.
+% Run the homogeneous assortativity file first, and then this one
 
 %% Assortativity of any individual
 % We ignore empty nodes as no individuals are present
@@ -70,10 +66,14 @@ end
 %% Figure 3b (heterogeneous)
 
 R_mean = mean(R_over_global_over_time,2);
-
-fig1 = figure(); %relative assortativity
-plot(0:0.1:1, R_mean/R_mean(end), 'LineWidth', 1.5);
-hold on
+%relative assortativity
+plot(0:0.1:1, R_mean/R_mean(end), 'Color', [0.9290 0.6940 0.1250], 'LineWidth', 1.5);
+ylabel('Relative Assortativity')
+ylim([1 3.5])
+xlabel('Proportion of global transmission, G_T')
+set(gca, 'Position', [0.1 0.15 0.45 0.8])
+set(gca,'fontsize', 12) 
+Leg = legend('Homog. k = \infty', 'Hetero. k = 0.2');
 
 % fig2 = figure(); %absolute assortativity
 % plot(0:0.1:1, R_mean, 'LineWidth', 1.5);

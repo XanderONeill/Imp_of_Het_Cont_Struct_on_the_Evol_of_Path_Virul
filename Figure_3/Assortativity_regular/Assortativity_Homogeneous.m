@@ -1,10 +1,7 @@
 clearvars
 close all
 
-% Requires the obtaining of data from the homogeneous network simulations.
-% Cannot upload our data files to Github as they take up too much file
-% space, but make sure to run simulations to obtain the correct data files
-% first.
+% Run this homogeneous file first, then the heterogeneous one
 
 %% Assortativity of any individual
 % We ignore empty nodes as no individuals are present
