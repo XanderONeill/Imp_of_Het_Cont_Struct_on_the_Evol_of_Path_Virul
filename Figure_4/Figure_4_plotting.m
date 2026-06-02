@@ -12,38 +12,38 @@ y_sd = zeros(3, 6);
 %% Load data for G_T = 1, find measures
 
 load('Gt1k02.mat');     y_means(1, 1)  = mean(mean_alpha_vec);
-                        y_sd(1, 1)     = std(mean_alpha_vec(end-4000:end));
-load('Gt1k05.mat');     y_means(1, 2)  = mean(mean_alpha_vec(4000:end));
-                        y_sd(1, 2)     = std(mean_alpha_vec(end-4000:end));
-load('Gt1k1.mat');      y_means(1, 3)  = mean(mean_alpha_vec(4000:end));
-                        y_sd(1, 3)     = std(mean_alpha_vec(end-4000:end));
-load('Gt1k2.mat');      y_means(1, 4)  = mean(mean_alpha_vec(4000:end));
-                        y_sd(1, 4)     = std(mean_alpha_vec(end-4000:end));
-load('Gt1k5.mat');      y_means(1, 5)  = mean(mean_alpha_vec(4000:end));
-                        y_sd(1, 5)     = std(mean_alpha_vec(end-4000:end));
-load('Gt1.mat');        y_means(1, 6)  = mean(mean_alpha_vec(4000:end));
-                       y_sd(1, 6)     = std(mean_alpha_vec(end-4000:end));                        
+                        y_sd(1, 1)     = std(mean_alpha_vec);
+load('Gt1k05.mat');     y_means(1, 2)  = mean(mean_alpha_vec);
+                        y_sd(1, 2)     = std(mean_alpha_vec);
+load('Gt1k1.mat');      y_means(1, 3)  = mean(mean_alpha_vec);
+                        y_sd(1, 3)     = std(mean_alpha_vec);
+load('Gt1k2.mat');      y_means(1, 4)  = mean(mean_alpha_vec);
+                        y_sd(1, 4)     = std(mean_alpha_vec);
+load('Gt1k5.mat');      y_means(1, 5)  = mean(mean_alpha_vec);
+                        y_sd(1, 5)     = std(mean_alpha_vec);
+load('Gt1.mat');        y_means(1, 6)  = mean(mean_alpha_vec);
+                       y_sd(1, 6)     = std(mean_alpha_vec);                        
 
 n1 = 1;
 p1 = polyfit(x(1:6), y_means(1,:), n1);
 
 %% Load data for G_T = 0, find measures
 
-load('Gt0k02.mat');     y_means(3, 1)  = mean(mean_alpha_vec(4000:end));
-                        y_sd(3, 1)     = std(mean_alpha_vec(end-4000:end));
-load('Gt0k05.mat');     y_means(3, 2)  = mean(mean_alpha_vec(4000:end));
-                        y_sd(3, 2)     = std(mean_alpha_vec(end-4000:end));
-load('Gt0k1.mat');      y_means(3, 3)  = mean(mean_alpha_vec(4000:end));
-                        y_sd(3, 3)     = std(mean_alpha_vec(end-4000:end));
-load('Gt0k2.mat');      y_means(3, 4)  = mean(mean_alpha_vec(4000:end));
-                        y_sd(3, 4)     = std(mean_alpha_vec(end-4000:end));
-load('Gt0k5.mat');      y_means(3, 5)  = mean(mean_alpha_vec(4000:end));
-                        y_sd(3, 5)     = std(mean_alpha_vec(end-4000:end));
-load('Gt0.mat');        y_means(3, 6)  = mean(mean_alpha_vec(4000:end));
-                        y_sd(3, 6)     = std(mean_alpha_vec(end-4000:end));
+load('Gt0k02.mat');     y_means(3, 1)  = mean(mean_alpha_vec);
+                        y_sd(3, 1)     = std(mean_alpha_vec);
+load('Gt0k05.mat');     y_means(3, 2)  = mean(mean_alpha_vec);
+                        y_sd(3, 2)     = std(mean_alpha_vec);
+load('Gt0k1.mat');      y_means(3, 3)  = mean(mean_alpha_vec);
+                        y_sd(3, 3)     = std(mean_alpha_vec);
+load('Gt0k2.mat');      y_means(3, 4)  = mean(mean_alpha_vec);
+                        y_sd(3, 4)     = std(mean_alpha_vec);
+load('Gt0k5.mat');      y_means(3, 5)  = mean(mean_alpha_vec);
+                        y_sd(3, 5)     = std(mean_alpha_vec);
+load('Gt0.mat');        y_means(3, 6)  = mean(mean_alpha_vec);
+                        y_sd(3, 6)     = std(mean_alpha_vec);
 
-n3 = 1;
-p3 = polyfit(x([1,6]), [y_means(3,1),M3], n3);
+% n3 = 1;
+% p3 = polyfit(x([1,6]), [y_means(3,1),M3], n3);
 
 %% Figure 1: ESS vs G_T
 
