@@ -1,4 +1,9 @@
-%%% Running the regular network evolution model; 
+%%% Running the homogeneous network evolution model but with infected
+%%% individuals able to give birth
+
+% The same as the standard homoogeneous model, except with the function
+% 'Gillespie_Graph' being adjusted to allow for all individuals to
+% reproduce into neighbouring empty nodes.
 
 clearvars
 close all
