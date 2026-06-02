@@ -13,28 +13,28 @@ y_sd = zeros(1, 11);
 
 %% Load data, find measures
 
-load('Gt0k02.mat');     y_means(1)  = mean(mean_alpha_vec(4000:end));
-                        y_sd(1)     = std(mean_alpha_vec(end-4000:end));
-load('Gt01k02.mat');    y_means(2)  = mean(mean_alpha_vec(4000:end));
-                        y_sd(2)     = std(mean_alpha_vec(end-4000:end));
-load('Gt02k02.mat');    y_means(3)  = mean(mean_alpha_vec(4000:end));
-                        y_sd(3)     = std(mean_alpha_vec(end-4000:end));
-load('Gt03k02.mat');    y_means(4)  = mean(mean_alpha_vec(4000:end));
-                        y_sd(4)     = std(mean_alpha_vec(end-4000:end));
-load('Gt04k02.mat');    y_means(5)  = mean(mean_alpha_vec(4000:end));
-                        y_sd(5)     = std(mean_alpha_vec(end-4000:end));
-load('Gt05k02.mat');    y_means(6)  = mean(mean_alpha_vec(4000:end));
-                        y_sd(6)     = std(mean_alpha_vec(end-4000:end));
-load('Gt06k02.mat');    y_means(7)  = mean(mean_alpha_vec(4000:end));
-                        y_sd(7)     = std(mean_alpha_vec(end-4000:end));
-load('Gt07k02.mat');    y_means(8)  = mean(mean_alpha_vec(4000:end));
-                        y_sd(8)     = std(mean_alpha_vec(end-4000:end));
-load('Gt08k02.mat');    y_means(9)  = mean(mean_alpha_vec(4000:end));
-                        y_sd(9)     = std(mean_alpha_vec(end-4000:end));
-load('Gt09k02.mat');    y_means(10) = mean(mean_alpha_vec(4000:end));
-                        y_sd(10)    = std(mean_alpha_vec(end-4000:end));
-load('Gt1k02.mat');     y_means(11) = mean(mean_alpha_vec(4000:end));
-                        y_sd(11)    = std(mean_alpha_vec(end-4000:end));
+load('Gt0k02.mat');     y_means(1)  = mean(mean_alpha_vec);
+                        y_sd(1)     = std(mean_alpha_vec);
+load('Gt01k02.mat');    y_means(2)  = mean(mean_alpha_vec);
+                        y_sd(2)     = std(mean_alpha_vec);
+load('Gt02k02.mat');    y_means(3)  = mean(mean_alpha_vec);
+                        y_sd(3)     = std(mean_alpha_vec);
+load('Gt03k02.mat');    y_means(4)  = mean(mean_alpha_vec);
+                        y_sd(4)     = std(mean_alpha_vec);
+load('Gt04k02.mat');    y_means(5)  = mean(mean_alpha_vec);
+                        y_sd(5)     = std(mean_alpha_vec);
+load('Gt05k02.mat');    y_means(6)  = mean(mean_alpha_vec);
+                        y_sd(6)     = std(mean_alpha_vec);
+load('Gt06k02.mat');    y_means(7)  = mean(mean_alpha_vec);
+                        y_sd(7)     = std(mean_alpha_vec);
+load('Gt07k02.mat');    y_means(8)  = mean(mean_alpha_vec);
+                        y_sd(8)     = std(mean_alpha_vec);
+load('Gt08k02.mat');    y_means(9)  = mean(mean_alpha_vec);
+                        y_sd(9)     = std(mean_alpha_vec);
+load('Gt09k02.mat');    y_means(10) = mean(mean_alpha_vec);
+                        y_sd(10)    = std(mean_alpha_vec);
+load('Gt1k02.mat');     y_means(11) = mean(mean_alpha_vec);
+                        y_sd(11)    = std(mean_alpha_vec);
 
 n = 2;
 p = polyfit(x,y_means,n);
@@ -65,7 +65,7 @@ ylabel('Evolved level of virulence')
 set(gca,'box','off')
 %set(gca, 'position', [0.11 0.15 0.36 0.45])
 % leg1 = legend('k=\infty', '', 'k=0.2', '', 'Location', 'SouthEast');
-leg1 = legend('Heterogeneity in Susceptible Contacts', '', 'Heterogeneity in Infected Contacts', '', 'Location', 'SouthEast');
+leg1 = legend('k=\infty', '', 'k=0.2', '', 'Location', 'SouthEast');
 % leg1 = legend('Negative covariance', '', 'Positive covariance', '', 'Location', 'SouthEast');
 set(leg1,'Box','off')
 
